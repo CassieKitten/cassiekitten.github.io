@@ -1,61 +1,66 @@
 body {
   margin: 1em;
-  font-family: sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   background-color: #e09999;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(3, 1fr) 2fr;
   grid-gap: 1em;
 }
 
-#kiss-button, #work-button, #date-button, #gift-button {
-  background-color: #99e0ad;
-  outline: 2px solid #47935d;
-  outline-offset: -2px;
-  color: black;
-  padding: 1.5em .5em;
-  text-align: center;
-  grid-column: auto / span 4;
-  user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-}
-
-#title-display, #kisses-display, #happiness-display, #money-display, #girlfriends-display, #love-display, #kisses-per-girlfriend-display, #kisses-per-second-display {
+.button, .display {
   background-color: #ffc8c8;
   outline: 2px solid #935656;
   outline-offset: -2px;
   color: black;
   padding: 1.5em .5em;
   text-align: center;
-  grid-column: auto / span 4;
+  grid-column: auto / span 1;
+  display: none;
+}
+
+.button {
+  background-color: #99e0ad;
+  outline-color: #47935d;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  display: block;
 }
 
 #title-display {
-  grid-column: 1 / 13;
+  grid-column: 1 / 5;
+  display: block;
 }
 
 #kiss-button {
-  grid-column: auto / span 8;
+  grid-column: auto / span 3;
   font-size: 2.5em;
   padding: .5em;
 }
 
-#kisses-display {
-  grid-column: auto / span 4;
+#stats-display {
+  grid-column: 4 / 5;
+  grid-row: auto / span 3;
+  display: block;
 }
 
-.title-text, .button-text {
+.title-text {
   font-size: 1.5em;
   font-weight: bold;
   display: block;
   padding-bottom: .25em;
 }
 
-.subtitle-text, .description-text {
+.small-title-text {
+  font-weight: bold;
+  display: block;
+}
+
+.subtitle-text {
   font-size: .85em;
   display: block;
 }
@@ -68,4 +73,27 @@ a:link, a:visited, a:hover, a:active {
 
 a:hover, a:active {
   color: white;
+}
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr {
+  border-top: 1px solid #935656;
+  height: 1.65em;
+}
+
+tr:first-child {
+  border-top-color: #93565600;
+}
+
+.td-left {
+  text-align: left;
+  font-weight: bold;
+}
+
+.td-right {
+  text-align: right;
 }
