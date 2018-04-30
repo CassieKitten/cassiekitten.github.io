@@ -31,41 +31,68 @@
 
 <body>
   <div class="grid-container">
-    <div id="kiss-button" onclick="kiss(1)">
+    <div class="display" id="title-display">
+      <div class="title-text">Girl Kisser</div>
+      <div class="subtitle-text">A game by <a href="https://github.com/CassieKitten" target="_blank">Cassie</a></div>
+    </div>
+    <div class="button" id="kiss-button" onclick="kiss(1)">
       💋
     </div>
-    <div id="kisses-display">
-      Kisses: 0
+    <div class="display" id="stats-display">
+      <div class="title-text">Stats</div>
+      <div class="subtitle-text">
+        <table class="stats-table">
+          <tr>
+            <td class="td-left">Kisses:</td>
+            <td class="td-right" id="kisses-stat">0</td>
+          </tr>
+          <tr>
+            <td class="td-left">Happiness:</td>
+            <td class="td-right" id="happiness-stat">0</td>
+          </tr>
+          <tr>
+            <td class="td-left">Money:</td>
+            <td class="td-right" id="money-stat">$0</td>
+          </tr>
+          <tr>
+            <td class="td-left">Girlfriends:</td>
+            <td class="td-right" id="girlfriends-stat">0</td>
+          </tr>
+          <tr>
+            <td class="td-left">Love:</td>
+            <td class="td-right" id="love-stat">0</td>
+          </tr>
+          <tr>
+            <td class="td-left">Kisses per Girlfriend:</td>
+            <td class="td-right" id="kisses-per-girlfriend-stat">1</td>
+          </tr>
+          <tr>
+            <td class="td-left">Kisses per Second:</td>
+            <td class="td-right" id="kisses-per-second-stat">0</td>
+          </tr>
+        </table>
+      </div>
     </div>
-    <div id="work-button" onclick="work(1)">
-      <div class="button-text">Work</div>
-      <div class="description-text">(5 happiness &rarr; $1)</div>
+    <div class="button" id="work-button" onclick="work(1)">
+      <div class="title-text">Work</div>
+      <div class="subtitle-text">(5 happiness &rarr; $1)</div>
     </div>
-    <div id="date-button" onclick="date(1)">
-      <div class="button-text">Date</div>
-      <div class="description-text">($20 &rarr; chance for a girlfriend)</div>
+    <div class="button" id="date-button" onclick="date(1)">
+      <div class="title-text">Date</div>
+      <div class="subtitle-text">($20 &rarr; chance for a girlfriend)</div>
     </div>
-    <div id="gift-button" onclick="gift(1)">
-      <div class="button-text">Gift</div>
-      <div class="description-text">($30 &rarr; 1 love)</div>
+    <div class="button" id="gift-button" onclick="gift(1)">
+      <div class="title-text">Gift</div>
+      <div class="subtitle-text">($30 &rarr; 1 love)</div>
     </div>
-    <div id="happiness-display">
-      Happiness: 0
+    <div class="button" id="work-all-button" onclick="work(Infinity)">
+      <div class="small-title-text">Work All</div>
     </div>
-    <div id="money-display">
-      Money: $0
+    <div class="button" id="date-all-button" onclick="date(Infinity)">
+      <div class="small-title-text">Date All</div>
     </div>
-    <div id="girlfriends-display">
-      Girlfriends: 0
-    </div>
-    <div id="love-display">
-      Love: 0
-    </div>
-    <div id="kisses-per-girlfriend-display">
-      Kisses per Girlfriend: 1
-    </div>
-    <div id="kisses-per-second-display">
-      Kisses per Second: 0
+    <div class="button" id="gift-all-button" onclick="gift(Infinity)">
+      <div class="small-title-text">Gift All</div>
     </div>
   </div>
 </body>
