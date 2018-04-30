@@ -148,6 +148,7 @@ function updateLove() {
 function updateGirlfriends() {
   document.getElementById("girlfriends-display").innerHTML = "Girlfriends: " + round(girlfriends, 0).toLocaleString();
   localStorage.girlfriends = girlfriends;
+  ga("send", "event", "Game", "Date", Math.floor(kisses));
 }
 
 function updateKissesPerGirlfriend() {
