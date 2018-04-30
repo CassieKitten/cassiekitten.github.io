@@ -1,3 +1,5 @@
+var tickRate = 10; // how many times per second the main game loop runs
+
 var kisses = 0;
 var happiness = 0;
 var money = 0;
@@ -17,23 +19,23 @@ document.addEventListener('DOMContentLoaded', function () {
   // Load from Web Storage
   if (typeof(Storage) !== "undefined") {
     if (localStorage.kisses) {
-      kisses = parseInt(localStorage.kisses);
+      kisses = parseFloat(localStorage.kisses);
       updateKisses();
     }
     if (localStorage.happiness) {
-      happiness = parseInt(localStorage.happiness);
+      happiness = parseFloat(localStorage.happiness);
       updateHappiness();
     }
     if (localStorage.money) {
-      money = parseInt(localStorage.money);
+      money = parseFloat(localStorage.money);
       updateMoney();
     }
     if (localStorage.love) {
-      love = parseInt(localStorage.love);
+      love = parseFloat(localStorage.love);
       updateLove();
     }
     if (localStorage.girlfriends) {
-      girlfriends = parseInt(localStorage.girlfriends);
+      girlfriends = parseFloat(localStorage.girlfriends);
       updateGirlfriends();
     }
     if (localStorage.dateChance) {
@@ -148,7 +150,6 @@ function updateLove() {
 function updateGirlfriends() {
   document.getElementById("girlfriends-display").innerHTML = "Girlfriends: " + round(girlfriends, 0).toLocaleString();
   localStorage.girlfriends = girlfriends;
-  ga("send", "event", "Game", "Date", Math.floor(kisses));
 }
 
 function updateKissesPerGirlfriend() {
@@ -163,7 +164,9 @@ function updateKissesPerSecond() {
 
 // Main game loop
 window.setInterval(function () {
+  // var t = window.performance.now();
   updateKissesPerGirlfriend();
   updateKissesPerSecond();
-  kiss(kissesPerSecond);
-}, 1000);
+  kiss(kissesPerSecond / tickRate);
+  // console.log(window.performance.now() - t);
+}, 1000 / tickRate);
