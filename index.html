@@ -42,35 +42,38 @@
       <div class="title-text">Stats</div>
       <div class="subtitle-text">
         <table class="stats-table">
-          <tr>
+          <tr class="stats-tr" id="kisses-tr">
             <td class="td-left">Kisses:</td>
             <td class="td-right" id="kisses-stat">0</td>
           </tr>
-          <tr>
+          <tr class="stats-tr" id="happiness-tr">
             <td class="td-left">Happiness:</td>
             <td class="td-right" id="happiness-stat">0</td>
           </tr>
-          <tr>
+          <tr class="stats-tr" id="money-tr">
             <td class="td-left">Money:</td>
             <td class="td-right" id="money-stat">$0</td>
           </tr>
-          <tr>
+          <tr class="stats-tr" id="girlfriends-tr">
             <td class="td-left">Girlfriends:</td>
             <td class="td-right" id="girlfriends-stat">0</td>
           </tr>
-          <tr>
+          <tr class="stats-tr" id="love-tr">
             <td class="td-left">Love:</td>
             <td class="td-right" id="love-stat">0</td>
           </tr>
-          <tr>
+          <tr class="stats-tr" id="kisses-per-girlfriend-tr">
             <td class="td-left">Kisses per Girlfriend:</td>
             <td class="td-right" id="kisses-per-girlfriend-stat">1</td>
           </tr>
-          <tr>
+          <tr class="stats-tr" id="kisses-per-second-tr">
             <td class="td-left">Kisses per Second:</td>
             <td class="td-right" id="kisses-per-second-stat">0</td>
           </tr>
         </table>
+        <div id="reset-button">
+          <a href="#" onclick="promptReset()">Reset</a>
+        </div>
       </div>
     </div>
     <div class="button" id="work-button" onclick="work(1)">
