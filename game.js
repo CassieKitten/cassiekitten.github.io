@@ -48,6 +48,12 @@ document.addEventListener('DOMContentLoaded', function () {
   updateKissesPerSecond();
 }, false);
 
+function promptReset() {
+  if (window.confirm("This will reset all your stats to 0.\nThe game will restart from the beginning.\nAre you sure you want to reset?")) {
+    reset();
+  }
+}
+
 // Restarts the game, setting everything back to 0
 function reset() {
   kisses = 0;
