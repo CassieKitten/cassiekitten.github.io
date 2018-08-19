@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118386085-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-118386085-1');
+  </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Girl Kisser</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#f1370f">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:image:width" content="279">
+  <meta property="og:image:height" content="279">
+  <meta property="og:description" content="A clicker game about kissing and being kissed by as many girls as possible">
+  <meta property="og:title" content="Girl Kisser">
+  <meta property="og:url" content="https://cassiepeele.github.io/games/girl">
+  <meta property="og:image" content="https://cassiepeele.github.io/games/girl/og-image.jpg">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="game.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="display" id="title-display">
+      <div class="title-text">Girl Kisser</div>
+      <div class="subtitle-text">A game by <a href="https://github.com/CassiePeele" target="_blank">Cassie</a></div>
+    </div>
+    <div class="button" id="kiss-button" onclick="kiss(1)">
+      💋
+    </div>
+    <div class="display" id="stats-display">
+      <div class="title-text">Stats</div>
+      <div class="subtitle-text">
+        <table class="stats-table">
+          <tr class="stats-tr" id="kisses-tr">
+            <td class="td-left">Kisses:</td>
+            <td class="td-right" id="kisses-stat">0</td>
+          </tr>
+          <tr class="stats-tr" id="happiness-tr">
+            <td class="td-left">Happiness:</td>
+            <td class="td-right" id="happiness-stat">0</td>
+          </tr>
+          <tr class="stats-tr" id="money-tr">
+            <td class="td-left">Money:</td>
+            <td class="td-right" id="money-stat">$0</td>
+          </tr>
+          <tr class="stats-tr" id="girlfriends-tr">
+            <td class="td-left">Girlfriends:</td>
+            <td class="td-right" id="girlfriends-stat">0</td>
+          </tr>
+          <tr class="stats-tr" id="love-tr">
+            <td class="td-left">Love:</td>
+            <td class="td-right" id="love-stat">0</td>
+          </tr>
+          <tr class="stats-tr" id="kisses-per-girlfriend-tr">
+            <td class="td-left">Kisses per Girlfriend:</td>
+            <td class="td-right" id="kisses-per-girlfriend-stat">1</td>
+          </tr>
+          <tr class="stats-tr" id="kisses-per-second-tr">
+            <td class="td-left">Kisses per Second:</td>
+            <td class="td-right" id="kisses-per-second-stat">0</td>
+          </tr>
+        </table>
+        <div id="reset-button">
+          <a href="#" onclick="promptReset()">Reset</a>
+        </div>
+      </div>
+    </div>
+    <div class="button" id="work-button" onclick="work(1)">
+      <div class="title-text">Work</div>
+      <div class="subtitle-text">(5 happiness &rarr; $1)</div>
+    </div>
+    <div class="button" id="date-button" onclick="date(1)">
+      <div class="title-text">Date</div>
+      <div class="subtitle-text">($20 &rarr; chance for a girlfriend)</div>
+    </div>
+    <div class="button" id="gift-button" onclick="gift(1)">
+      <div class="title-text">Gift</div>
+      <div class="subtitle-text">($30 &rarr; 1 love)</div>
+    </div>
+    <div class="button" id="work-all-button" onclick="work(Infinity)">
+      <div class="small-title-text">Work All</div>
+    </div>
+    <div class="button" id="date-all-button" onclick="date(Infinity)">
+      <div class="small-title-text">Date All</div>
+    </div>
+    <div class="button" id="gift-all-button" onclick="gift(Infinity)">
+      <div class="small-title-text">Gift All</div>
+    </div>
+  </div>
+</body>
+</html>

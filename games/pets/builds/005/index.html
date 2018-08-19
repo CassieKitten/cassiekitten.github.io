@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Petting Zoo - a game by Cassie</title>
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    
+    <style type="text/css">
+      div.content {
+        margin: auto;
+        width: 960px
+        max-width: 100%;
+      }
+      
+      div#unityPlayer {
+        cursor: default;
+        height: 600px;
+        width: 960px;
+        max-height: 100%;
+        max-width: 100%;
+      }
+    </style>
+    
+    <script src="TemplateData/UnityProgress.js"></script>
+  </head>
+  <body>
+    <h2>
+      Petting Zoo
+    </h2>
+    <p>
+      a game by Cassie
+    </p>
+    <div id="load-text">
+      I'm a little shy, give me just a minute please!
+    </div>
+    <br />
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px" style="max-width: 100%;"></canvas>
+    <br />
+    <div class="fullscreen"><a href="#" onclick="SetFullscreen(1);"><i>Fullscreen</i></a></div>
+    <hr />
+    <p>Petting Zoo is a game about petting animals.</p>
+    <table>
+      <tr>
+        <td>
+          <p>Move the player:</p><div><i>Arrow Keys</i> or <i>WASD</i></div>
+        </td>
+        <td>
+          <p>Create another pet:</p><div><i>P</i></div>
+        </td>
+        <td>
+          <p>Toggle camera zoom:</p><div><i>Z</i></div>
+        </td>
+      </tr>
+    </table>
+    <hr />
+    <br />
+    <div id="info">Current Version: Build_005 (21 Nov 2015).<br />&copy; 2015 Cassie Peele. Inspired by Madison.</div>
+		
+		<!-- Histats.com  START (hidden counter)-->
+    <script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script>
+    <a href="http://www.histats.com" target="_blank" title="hit tracker" ><script  type="text/javascript" >
+    try {Histats.start(1,3195944,4,0,0,0,"");
+    Histats.track_hits();} catch(err){};
+    </script></a>
+    <noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?3195944&101" alt="hit tracker" border="0"></a></noscript>
+    <!-- Histats.com  END  -->
+		
+    <script type='text/javascript'>
+  // connect to canvas
+  var Module = {
+    TOTAL_MEMORY: 536870912,
+    filePackagePrefixURL: "Release/",
+    memoryInitializerPrefixURL: "Release/",
+    preRun: [],
+    postRun: [],
+    print: (function() {
+      return function(text) {
+        console.log (text);
+      };
+    })(),
+    printErr: function(text) {
+      console.error (text);
+    },
+    canvas: document.getElementById('canvas'),
+    progress: null,
+    setStatus: function(text) {
+      if (this.progress == null) 
+      {
+        if (typeof UnityProgress != 'function')
+          return;
+        this.progress = new UnityProgress (canvas);
+      }
+      if (!Module.setStatus.last) Module.setStatus.last = { time: Date.now(), text: '' };
+      if (text === Module.setStatus.text) return;
+      this.progress.SetMessage (text);
+      var m = text.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/);
+      if (m)
+        this.progress.SetProgress (parseInt(m[2])/parseInt(m[4]));
+      if (text === "") 
+        this.progress.Clear()
+    },
+    totalDependencies: 0,
+    monitorRunDependencies: function(left) {
+      this.totalDependencies = Math.max(this.totalDependencies, left);
+      Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies-left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
+    }
+  };
+  Module.setStatus('Downloading (0.0/1)');
+</script>
+<script src="Release/UnityConfig.js"></script>
+<script src="Release/fileloader.js"></script>
+<script>if (!(!Math.fround)) {
+  var script = document.createElement('script');
+  script.src = "Release/005.js";
+  document.body.appendChild(script);
+} else {
+  var codeXHR = new XMLHttpRequest();
+  codeXHR.open('GET', 'Release/005.js', true);
+  codeXHR.onload = function() {
+    var code = codeXHR.responseText;
+    if (!Math.fround) { 
+try {
+  console.log('optimizing out Math.fround calls');
+  var m = /var ([^=]+)=global\.Math\.fround;/.exec(code);
+  var minified = m[1];
+  if (!minified) throw 'fail';
+  var startAsm = code.indexOf('// EMSCRIPTEN_START_FUNCS');
+  var endAsm = code.indexOf('// EMSCRIPTEN_END_FUNCS');
+  var asm = code.substring(startAsm, endAsm);
+  do {
+    var moar = false; // we need to re-do, as x(x( will not be fixed
+    asm = asm.replace(new RegExp('[^a-zA-Z0-9\\$\\_]' + minified + '\\(', 'g'), function(s) { moar = true; return s[0] + '(' });
+  } while (moar);
+  code = code.substring(0, startAsm) + asm + code.substring(endAsm);
+  code = code.replace("'use asm'", "'almost asm'");
+} catch(e) { console.log('failed to optimize out Math.fround calls ' + e) }
+ }
+
+    var blob = new Blob([code], { type: 'text/javascript' });
+    codeXHR = null;
+    var src = URL.createObjectURL(blob);
+    var script = document.createElement('script');
+    script.src = URL.createObjectURL(blob);
+    script.onload = function() {
+      URL.revokeObjectURL(script.src);
+    };
+    document.body.appendChild(script);
+  };
+  codeXHR.send(null);
+}
+</script>
+    
+  </body>
+</html>

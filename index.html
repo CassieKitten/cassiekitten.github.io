@@ -1,102 +1,89 @@
-<!doctype html>
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118386085-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'UA-118386085-1');
-  </script>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Girl Kisser</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f1370f">
-  <meta name="msapplication-TileColor" content="#2d89ef">
-  <meta name="theme-color" content="#ffffff">
-  <meta property="og:image:width" content="279">
-  <meta property="og:image:height" content="279">
-  <meta property="og:description" content="A clicker game about kissing and being kissed by as many girls as possible">
-  <meta property="og:title" content="Girl Kisser">
-  <meta property="og:url" content="https://cassiepeele.github.io">
-  <meta property="og:image" content="https://cassiepeele.github.io/og-image.jpg">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <script src="game.js" charset="utf-8"></script>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Cassie Peele</title>
+  <meta name="description" content="">
+  <meta name="author" content="Cassie Peele">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/cassie.css">
+
+  <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript" src="js/cassie.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
 </head>
-
 <body>
-  <div class="grid-container">
-    <div class="display" id="title-display">
-      <div class="title-text">Girl Kisser</div>
-      <div class="subtitle-text">A game by <a href="https://github.com/CassiePeele" target="_blank">Cassie</a></div>
-    </div>
-    <div class="button" id="kiss-button" onclick="kiss(1)">
-      💋
-    </div>
-    <div class="display" id="stats-display">
-      <div class="title-text">Stats</div>
-      <div class="subtitle-text">
-        <table class="stats-table">
-          <tr class="stats-tr" id="kisses-tr">
-            <td class="td-left">Kisses:</td>
-            <td class="td-right" id="kisses-stat">0</td>
-          </tr>
-          <tr class="stats-tr" id="happiness-tr">
-            <td class="td-left">Happiness:</td>
-            <td class="td-right" id="happiness-stat">0</td>
-          </tr>
-          <tr class="stats-tr" id="money-tr">
-            <td class="td-left">Money:</td>
-            <td class="td-right" id="money-stat">$0</td>
-          </tr>
-          <tr class="stats-tr" id="girlfriends-tr">
-            <td class="td-left">Girlfriends:</td>
-            <td class="td-right" id="girlfriends-stat">0</td>
-          </tr>
-          <tr class="stats-tr" id="love-tr">
-            <td class="td-left">Love:</td>
-            <td class="td-right" id="love-stat">0</td>
-          </tr>
-          <tr class="stats-tr" id="kisses-per-girlfriend-tr">
-            <td class="td-left">Kisses per Girlfriend:</td>
-            <td class="td-right" id="kisses-per-girlfriend-stat">1</td>
-          </tr>
-          <tr class="stats-tr" id="kisses-per-second-tr">
-            <td class="td-left">Kisses per Second:</td>
-            <td class="td-right" id="kisses-per-second-stat">0</td>
-          </tr>
-        </table>
-        <div id="reset-button">
-          <a href="#" onclick="promptReset()">Reset</a>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="u-full-width" style="margin-top: 5%">
+        <h1 class="u-centered">Cassie Peele</h1>
+        <h5 class="u-centered">Game&nbsp;Programmer &nbsp;&bullet;&nbsp; Raleigh,&nbsp;NC</h5>
+        <h6 class="u-centered"><a href="Resume.pdf" target="_blank">Resume</a> &nbsp;&bullet;&nbsp; <a href="mailto:cassietpeele@gmail.com" target="_blank">Email</a></h6>
+        <div class="table">
+          <div class="table-row">
+            <div class="table-head">Game</div>
+            <div class="table-head">Engine</div>
+            <div class="table-head">Updated</div>
+          </div class="table-row">
+          <a href="games/plat" class="table-row clickable">
+            <div class="table-cell">PlatFORMER</div>
+            <div class="table-cell">Unity</div>
+            <div class="table-cell">19 July 2018</div>
+          </a>
+          <a href="games/girl" class="table-row clickable">
+            <div class="table-cell">Girl Kisser</div>
+            <div class="table-cell">JavaScript</div>
+            <div class="table-cell">1 May 2018</div>
+          </a>
+          <a href="games/zero" class="table-row clickable">
+            <div class="table-cell">Zero</div>
+            <div class="table-cell">SimpleGame.js</div>
+            <div class="table-cell">8 December 2016</div>
+          </a>
+          <a href="games/pong" class="table-row clickable">
+            <div class="table-cell">Pong</div>
+            <div class="table-cell">SimpleGame.js</div>
+            <div class="table-cell">30 November 2016</div>
+          </a>
+          <a href="games/math" class="table-row clickable">
+            <div class="table-cell">Math Quiz</div>
+            <div class="table-cell">JavaScript</div>
+            <div class="table-cell">3 November 2016</div>
+          </a>
+          <a href="games/pets" class="table-row clickable">
+            <div class="table-cell">Petting Zoo</div>
+            <div class="table-cell">Unity</div>
+            <div class="table-cell">21 November 2015</div>
+          </a>
         </div>
       </div>
     </div>
-    <div class="button" id="work-button" onclick="work(1)">
-      <div class="title-text">Work</div>
-      <div class="subtitle-text">(5 happiness &rarr; $1)</div>
-    </div>
-    <div class="button" id="date-button" onclick="date(1)">
-      <div class="title-text">Date</div>
-      <div class="subtitle-text">($20 &rarr; chance for a girlfriend)</div>
-    </div>
-    <div class="button" id="gift-button" onclick="gift(1)">
-      <div class="title-text">Gift</div>
-      <div class="subtitle-text">($30 &rarr; 1 love)</div>
-    </div>
-    <div class="button" id="work-all-button" onclick="work(Infinity)">
-      <div class="small-title-text">Work All</div>
-    </div>
-    <div class="button" id="date-all-button" onclick="date(Infinity)">
-      <div class="small-title-text">Date All</div>
-    </div>
-    <div class="button" id="gift-all-button" onclick="gift(Infinity)">
-      <div class="small-title-text">Gift All</div>
-    </div>
   </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>

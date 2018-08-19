@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Storytime</title>
+    <script src="madLib.js" type="text/javascript"></script>
+    <link href="style.css" type="text/css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <h1>Storytime</h1>
+    <form onsubmit="return false;">
+      <fieldset>
+        <label for="txtName1">Girl's name</label>
+        <input type="text" id="txtName1" autofocus>
+
+        <label for="txtName2">Another girl's name</label>
+        <input type="text" id="txtName2">
+
+        <label for="txtGeol">Geological structure</label>
+        <input type="text" id="txtGeol">
+
+        <label for="txtVerb">Verb</label>
+        <input type="text" id="txtVerb">
+
+        <label for="txtContainer">Container</label>
+        <input type="text" id="txtContainer">
+
+        <label for="txtLiquid">Liquid</label>
+        <input type="text" id="txtLiquid">
+
+        <label for="txtBodyPart">Body part</label>
+        <input type="text" id="txtBodyPart">
+
+        <label for="txtGerund">Gerund</label>
+        <input type="text" id="txtGerund">
+
+        <button onclick="tellStory()" type="submit">Tell me a story!</button>
+      </fieldset>
+    </form>
+
+    <div id="story">
+      <!-- empty initially -->
+    </div>
+
+  </body>
+
+</html>

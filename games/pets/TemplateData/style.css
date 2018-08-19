@@ -1,0 +1,54 @@
+body {
+  background-color: #2d3b4a;
+  color: #bbb;
+  font-family: Helvetica, Verdana, Arial, sans-serif;
+  font-size: 1.15em;
+  text-align: center;
+  line-height: 75%;
+}
+
+hr {
+  height: 2px;
+  border-width: 0;
+  color: #bbb;
+  background-color: #bbb;
+  width: 1000px;
+  max-width: 95%
+}
+
+table {
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td {
+  padding: 1em 2em;
+  line-height: 50%;
+}
+
+#info {
+  font-size: .6em;
+}
+
+#load-text {
+  font-size: 1.15em;
+  font-style: italic;
+  position: relative;
+  bottom: -300px;
+  margin-top: -1.15em;
+  z-index: -1;
+}
+
+a, a:hover, a:active, a:visited, a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+div.fullscreen {
+  margin: 1em;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Trivial Things</title>
+    <script src="script.js" type="text/javascript"></script>
+    <link href="style.css" type="text/css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <h1>Trivial Things</h1>
+
+    <div class="flex-container">
+      <form class="flex-item" onsubmit="return false;">
+        <input type="number" name="numStart" placeholder="Enter a number!" min=0 max=1000 step=1 autofocus>
+        <input type="number" name="numEnd" placeholder="Enter a bigger number!" min=0 max=1000 step=1>
+        <div class="button-wrapper"><button type="submit" tabindex="-1" name="btnCount" onclick="count(numStart, numEnd)">Start counting!</button></div>
+      </form>
+
+      <form class="flex-item" onsubmit="return false;">
+        <input type="number" name="ageYears" placeholder="How old are you?" min=0 max=150 step=1>
+        <div class="button-wrapper"><button type="submit" tabindex="-1" name="btnAge" onclick="yearsToDays(ageYears)">How long is that?</button></div>
+      </form>
+
+      <form class="flex-item" onsubmit="return false;">
+        <input type="number" name="numGuess" placeholder="Guess between 0 and 10!" min=0 max=10 step=1>
+        <div class="button-wrapper"><button type="submit" tabindex="-1" name="btnGuess" onclick="guess(numGuess)">Guess!</button></div>
+      </form>
+    </div>
+
+    <div id="output">
+
+    </div>
+
+  </body>
+
+</html>

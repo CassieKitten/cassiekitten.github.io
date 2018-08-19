@@ -1,0 +1,49 @@
+/*
+* cassie.css
+* Copyright 2018 Cassie Peele
+* http://www.opensource.org/licenses/mit-license.php
+*/
+
+/* General
+–––––––––––––––––––––––––––––––––––––––––––––––––- */
+body {
+  background-color: rgb(200, 200, 200); }
+
+/* Fake tables */
+.table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse; }
+.table-row {
+  display: table-row; }
+.table-cell, .table-head {
+  display: table-cell;
+  padding: 1rem;
+  border: 0; }
+.table-head {
+  font-weight: bold;
+  border-bottom: #222 1px solid; }
+.table-head:first-child,
+.table-cell:first-child {
+  padding-left: 15px; }
+.table-head:last-child,
+.table-cell:last-child {
+  padding-right: 0; }
+
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––- */
+.clickable {
+  cursor: pointer; }
+.clickable:hover {
+  background-color: rgba(160, 160, 160, 0.5); }
+a, a.table-row.clickable {
+  color: #222;
+  text-decoration: none; }
+a:hover, a:active {
+  color: #fff; }
+
+/* Skeleton-style utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––- */
+.u-centered {
+  text-align: center; }

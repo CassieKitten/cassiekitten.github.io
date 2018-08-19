@@ -1,0 +1,16 @@
+:root {
+  --bg-mid: #081848;
+}
+
+body {
+  background-color: var(--bg-mid);
+  color: white;
+  font-family: "Helvetica", sans-serif;
+  font-size: 1.25em;
+  margin: 0;
+}
+
+canvas {
+  background-color: var(--bg-mid);
+  display: block;
+}

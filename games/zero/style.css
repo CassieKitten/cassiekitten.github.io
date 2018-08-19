@@ -1,0 +1,90 @@
+:root {
+  --bg-mid: #081848;
+  cursor: default;
+}
+
+body {
+  background-color: var(--bg-mid);
+  color: white;
+  font-family: "Helvetica", sans-serif;
+  font-size: 1.25em;
+  margin: 0;
+  font-size: 2em;
+  font-size: 2.95vmin;
+}
+
+canvas {
+  background-color: var(--bg-mid);
+  display: block;
+}
+
+#text-container {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 19em;
+  height: 19em;
+  width: 55vmin;
+  height: 55vmin;
+  margin: auto;
+  background: rgba(0, 0, 0, .6);
+  border-radius: 1.5em;
+}
+
+#intro, #outro {
+  display: block;
+  max-width: 80%;
+  margin: auto;
+  padding: 1.5em;
+}
+
+#outro {
+  display: none;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 1em;
+  line-height: 1.3em;
+  text-align: center;
+}
+
+span {
+  margin: auto;
+  padding: inherit;
+}
+
+code {
+  font-family: monospace;
+  border: .1em solid #fff;
+  border-radius: .15em;
+  padding: .1vmin .5vmin;
+  font-size: 2.5vmin;
+}
+
+#score-display {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2vmin;
+  z-index: 1;
+  width: 10vmin;
+  font-size: 1em;
+  margin: auto;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: .3em;
+  padding: .5vmin;
+}
+
+.unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

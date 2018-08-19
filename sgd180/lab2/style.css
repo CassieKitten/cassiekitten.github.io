@@ -1,0 +1,78 @@
+body {
+  background-color: gray;
+  color: white;
+  font-family: "Helvetica", sans-serif;
+  font-size: 1.5em;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+fieldset {
+  width: 80%;
+  max-width: 30em;
+  padding: 1em;
+  background-color: lightgray;
+  border: none;
+  border-bottom: .5em solid darkgray;
+  border-radius: .375em;
+  display: block;
+  margin: auto;
+}
+
+label {
+  display: inline-block;
+  text-align: right;
+  width: 45%;
+  max-width: 20em;
+  margin: auto;
+  margin-right: 1em;
+}
+
+input {
+  display: inline-block;
+  text-align: left;
+  width: 45%;
+  max-width: 30em;
+  margin: .625em auto;
+  border: none;
+  border-bottom: .1875em solid darkgray;
+  border-radius: .375em;
+  padding: .25em;
+  margin-left: 0em;
+  transition: padding .0625s, margin-left .0625s;
+}
+
+input:focus {
+  padding: .25em .625em;
+  margin-left: -.375em;
+  transition: padding .0625s, margin-left .0625s;
+}
+
+button {
+  display: block;
+  margin: 1em auto;
+  padding: .75em;
+  border: none;
+  color: white;
+  background-color: darkgray;
+  border-radius: .375em;
+  font-size: 1.25em;
+  transition: padding .0625s, font-stretch .5s;
+  font-stretch: normal;
+}
+
+button:hover {
+  padding: .75em 1.125em;
+  transition: padding .0625s, font-stretch .5s;
+}
+
+#story {
+  font-size: 1.25em;
+  line-height: 1.5em;
+  text-align: center;
+  font-style: italic;
+  margin: 2em;
+}

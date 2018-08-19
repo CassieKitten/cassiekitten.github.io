@@ -1,0 +1,33 @@
+:root {
+  --bg-low: #38161D;
+  --bg-mid: #5E2631;
+  --bg-high: #C44F66;
+}
+
+::selection {
+  background-color: rgba(255, 255, 255, .2);
+}
+
+body {
+  background-color: var(--bg-mid);
+  color: white;
+  font-family: "Helvetica", sans-serif;
+  font-size: 1.25em;
+  margin: 0;
+}
+
+canvas {
+  box-shadow: 0 10px 40px 5px rgba(0, 0, 0, .5);
+  background-color: var(--bg-mid);
+  display: block;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+#sprinkle-count {
+  margin: 0 1em;
+}
