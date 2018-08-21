@@ -7,7 +7,7 @@
 /* General
 –––––––––––––––––––––––––––––––––––––––––––––––––- */
 body {
-  background-color: rgb(200, 200, 200); }
+  background-color: #a1c5e9; }
 
 /* Fake tables */
 .table {
@@ -36,11 +36,13 @@ body {
 .clickable {
   cursor: pointer; }
 .clickable:hover {
-  background-color: rgba(160, 160, 160, 0.5); }
+  background-color: #657a8d; }
 a, a.table-row.clickable {
-  color: #222;
+  color: #569bd2;
   text-decoration: none; }
-a:hover, a:active {
+a div.table-cell {
+  color: #222; }
+a:hover, a:active, a:hover .table-cell {
   color: #fff; }
 
 /* Skeleton-style utilities
