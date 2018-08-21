@@ -39,6 +39,7 @@ body {
   background-color: #657a8d; }
 a, a.table-row.clickable {
   color: #569bd2;
+  font-weight: 400;
   text-decoration: none; }
 a div.table-cell {
   color: #222; }
