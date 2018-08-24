@@ -41,8 +41,14 @@
       <div class="u-full-width" style="margin-top: 5%">
         <h1 class="u-centered">Cassie Peele</h1>
         <h5 class="u-centered">Game&nbsp;Programmer &nbsp;&bullet;&nbsp; Raleigh,&nbsp;NC</h5>
-        <h6 class="u-centered"><a href="Resume.pdf" target="_blank">Resume</a> &nbsp;&bullet;&nbsp; <a href="mailto:cassietpeele@gmail.com" target="_blank">Email</a> &nbsp;&bullet;&nbsp; <a href="https://github.com/CassiePeele" target="_blank">GitHub</a></h6>
-        <div class="u-centered">Click on any game for a longer description and a link to play it.<br />PlatFORMER is downloadable for Windows and macOS.<br />All other games can be played in browser.</div>
+        <h6 class="u-centered">
+          <a href="Resume.pdf" target="_blank">Resume</a> &nbsp;&bullet;&nbsp;
+          <a href="mailto:cassietpeele@gmail.com" target="_blank">Email</a> &nbsp;&bullet;&nbsp;
+          <a href="https://github.com/CassiePeele" target="_blank">GitHub</a>
+        </h6>
+        <p class="u-centered">Click any game to play it or read a detailed description.<br />
+          PlatFORMER is downloadable for Windows and macOS.<br />
+          All other games can be played in browser.</p>
         <div class="table">
           <div class="table-row">
             <div class="table-head">Game</div>
@@ -50,43 +56,89 @@
             <div class="table-head">Engine</div>
             <div class="table-head">Updated</div>
           </div>
-          <a href="games/plat" class="table-row clickable">
+          <a id="row-plat" class="table-row clickable">
             <div class="table-cell">PlatFORMER</div>
-            <div class="table-cell">First-person puzzle platformer made in 8 weeks</div>
+            <div class="table-cell">First-person puzzle platformer made in eight weeks</div>
             <div class="table-cell">Unity</div>
             <div class="table-cell">19 July 2018</div>
           </a>
-          <a href="games/girl" class="table-row clickable">
+          <a id="row-girl" class="table-row clickable">
             <div class="table-cell">Girl Kisser</div>
             <div class="table-cell">Short idle game about being kissed</div>
             <div class="table-cell">JavaScript</div>
             <div class="table-cell">1 May 2018</div>
           </a>
-          <a href="games/zero" class="table-row clickable">
+          <a id="row-zero" class="table-row clickable">
             <div class="table-cell">Zero</div>
             <div class="table-cell">Dodge-the-falling-blocks game</div>
             <div class="table-cell">SimpleGame.js</div>
             <div class="table-cell">8 December 2016</div>
           </a>
-          <a href="games/pong" class="table-row clickable">
+          <a id="row-pong" class="table-row clickable">
             <div class="table-cell">Pong</div>
             <div class="table-cell">Simple two-player pong clone</div>
             <div class="table-cell">SimpleGame.js</div>
             <div class="table-cell">30 November 2016</div>
           </a>
-          <a href="games/math" class="table-row clickable">
+          <a id="row-math" class="table-row clickable">
             <div class="table-cell">Math Quiz</div>
             <div class="table-cell">Quiz to test your arithmetic skills</div>
             <div class="table-cell">JavaScript</div>
             <div class="table-cell">3 November 2016</div>
           </a>
-          <a href="games/pets" class="table-row clickable">
+          <a id="row-pets" class="table-row clickable">
             <div class="table-cell">Petting Zoo</div>
             <div class="table-cell">Relaxing game about petting animals</div>
             <div class="table-cell">Unity</div>
             <div class="table-cell">21 November 2015</div>
           </a>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span id="close" class="close">&times;</span>
+        <h5 id="head-plat" class="modal-head">PlatFORMER</h5>
+        <h5 id="head-girl" class="modal-head">Girl Kisser</h5>
+        <h5 id="head-zero" class="modal-head">Zero</h5>
+        <h5 id="head-pong" class="modal-head">Pong</h5>
+        <h5 id="head-math" class="modal-head">Math Quiz</h5>
+        <h5 id="head-pets" class="modal-head">Petting Zoo</h5>
+      </div>
+      <div id="info-plat" class="modal-body">
+        <p><i>PlatFORMER</i> is a 3D, first-person puzzle platforming game made in Unity using C#.
+          The entire game was built from scratch between May-July 2018, as a capstone project
+          for Wake Tech's Simulation and Game Development program. It represents the combined
+          talent and dedication of eight students.</p>
+        <p><i>PlatFORMER</i>'s primary mechanic involves attaching platforms to walls and floors
+          in order to create your own path through the world. I was one of three programmers on
+          the team, and although I helped write nearly every script in the game, my primary focus
+          was on game mechanics such as movement, platform placement, and object interaction.</p>
+        <p class="u-centered">
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XcC8UvUWxXw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </p>
+        <p class="u-centered">Download links:<br />
+          <a href="https://drive.google.com/uc?export=download&id=1WGiT1m_j9nn-z_Ad2l8F5zL9Pxi0Wf7S" target="_blank">Windows&nbsp;(159&nbsp;MB)</a> &nbsp;&bullet;&nbsp;
+          <a href="https://drive.google.com/uc?export=download&id=1wxM4aPV8RscGJKMBDCEYNWjV1DncrEam" target="_blank">macOS&nbsp;(161&nbsp;MB)</a>
+        </p>
+      </div>
+      <div id="info-girl" class="modal-body">
+        <p>Girl</p>
+      </div>
+      <div id="info-zero" class="modal-body">
+        <p>Zero</p>
+      </div>
+      <div id="info-pong" class="modal-body">
+        <p>Pong</p>
+      </div>
+      <div id="info-math" class="modal-body">
+        <p>Math</p>
+      </div>
+      <div id="info-pets" class="modal-body">
+        <p>Pets</p>
       </div>
     </div>
   </div>

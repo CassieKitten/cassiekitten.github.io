@@ -33,6 +33,7 @@ body {
 
 /* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––- */
+/* Clickable table rows */
 .clickable {
   cursor: pointer; }
 .clickable:hover {
@@ -45,6 +46,56 @@ a div.table-cell {
   color: #222; }
 a:hover, a:active, a:hover .table-cell {
   color: #fff; }
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #000;
+  background-color: #0006; }
+.modal-content {
+  background-color: #a1c5e9;
+  border: 1px solid #222;
+  margin: 10% auto;
+  padding: 0;
+  width: 40em;
+  max-width: 85%; }
+.modal-header {
+  padding: 0 1em;
+  line-height: 1px;
+  background-color: #569bd2;
+  color: #222; }
+.modal-head {
+  display: none; }
+.modal-body {
+  display: none;
+  margin: 0;
+  padding: 0 1em;
+  color: #222; }
+.close {
+  display: block;
+  color: #215260;
+  float: right;
+  position: relative;
+  top: .3em;
+  font-size: 2.4em; }
+.close:hover, close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media (min-width: 550px) {
+  .close {
+    font-size: 4em;
+  }
+}
+
 
 /* Skeleton-style utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––- */

@@ -1,22 +1,55 @@
 // cassie.js
-// Copyright 2017 Cassie Peele
+// Copyright 2017-2018 Cassie Peele
 // http://www.opensource.org/licenses/mit-license.php
+
+var modal;
+var modalBodies;
+var modalHeads;
 
 document.addEventListener("DOMContentLoaded", function(event) {
   init();
-})
+}, false);
 
 function init() {
-  // Make <tr>s clickable
-  var trs = document.getElementsByTagName("tr");
-  for (var tr of trs) {
-    if (tr.getAttribute("class") == "clickable") {
-      tr.addEventListener("click", function() {
-        var href = this.querySelector("a").getAttribute("href");
-        if (href) {
-          window.location.assign(href);
-        }
-      });
+  // Assign vars
+  modal = document.getElementById("modal");
+  modalBodies = document.getElementsByClassName("modal-body");
+  modalHeads = document.getElementsByClassName("modal-head");
+
+  // Allow opening modal
+  document.getElementById("row-plat").addEventListener("click", function() {openModal("plat");}, false);
+  document.getElementById("row-girl").addEventListener("click", function() {openModal("girl");}, false);
+  document.getElementById("row-zero").addEventListener("click", function() {openModal("zero");}, false);
+  document.getElementById("row-pong").addEventListener("click", function() {openModal("pong");}, false);
+  document.getElementById("row-math").addEventListener("click", function() {openModal("math");}, false);
+  document.getElementById("row-pets").addEventListener("click", function() {openModal("pets");}, false);
+
+  // Allow closing modal
+  document.getElementById("close").addEventListener("click", closeModal, false);
+  window.addEventListener("click", function() {
+    if (event.target == modal) {
+      closeModal();
     }
+  }, false);
+  window.addEventListener("keydown", function() {
+    if (event.key == "Esc" || event.key == "Escape") {
+      closeModal();
+    }
+  }, false);
+}
+
+function openModal(game) {
+  modal.style.display = "block";
+  document.getElementById("head-" + game).style.display = "block";
+  document.getElementById("info-" + game).style.display = "block";
+}
+
+function closeModal() {
+  modal.style.display = "none";
+  for (var modalBody of modalBodies) {
+    modalBody.style.display = "none";
+  }
+  for (var modalHead of modalHeads) {
+    modalHead.style.display = "none";
   }
 }
