@@ -36,20 +36,25 @@ function init() {
       closeModal();
     }
   }, false);
+  closeModal();
 }
 
 function openModal(game) {
   modal.style.display = "block";
-  document.getElementById("head-" + game).style.display = "block";
-  document.getElementById("info-" + game).style.display = "block";
+  // document.getElementById("head-" + game).style.display = "block";
+  // document.getElementById("info-" + game).style.display = "block";
+  document.getElementById("head-" + game).classList.remove("hidden");
+  document.getElementById("info-" + game).classList.remove("hidden");
 }
 
 function closeModal() {
   modal.style.display = "none";
   for (var modalBody of modalBodies) {
-    modalBody.style.display = "none";
+    // modalBody.style.display = "none";
+    modalBody.classList.add("hidden");
   }
   for (var modalHead of modalHeads) {
-    modalHead.style.display = "none";
+    // modalHead.style.display = "none";
+    modalHead.classList.add("hidden");
   }
 }
