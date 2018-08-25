@@ -38,23 +38,6 @@ p, .table {
     font-size: 1.5rem; }
 }
 
-
-/* Utilities
-–––––––––––––––––––––––––––––––––––––––––––––––––- */
-/* Clickable table rows */
-.clickable {
-  cursor: pointer; }
-.clickable:hover {
-  background-color: #657a8d; }
-a, a.table-row.clickable {
-  color: #569bd2;
-  font-weight: 400;
-  text-decoration: none; }
-a div.table-cell {
-  color: #222; }
-a:hover, a:active, a:hover .table-cell {
-  color: #fff; }
-
 /* Modal */
 .modal {
   display: none;
@@ -113,6 +96,23 @@ a:hover, a:active, a:hover .table-cell {
   .close {
     font-size: 4em; }
 }
+
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––- */
+/* Clickable table rows */
+.clickable {
+  cursor: pointer; }
+.clickable:hover {
+  background-color: #657a8d; }
+a, a.table-row.clickable {
+  color: #569bd2;
+  font-weight: 400;
+  text-decoration: none; }
+a div.table-cell {
+  color: #222; }
+a:hover, a:active, a:hover .table-cell {
+  color: #fff; }
 
 
 /* Skeleton-style utilities
