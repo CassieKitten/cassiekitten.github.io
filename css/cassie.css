@@ -30,6 +30,18 @@ body {
 .table-cell:last-child {
   padding-right: 0; }
 
+/* Mobile text scaling */
+p, .table {
+  font-size: .8rem; }
+@media (min-width: 400px) {
+  p, .table {
+    font-size: 1.0rem; }
+}
+@media (min-width: 550px) {
+  p, .table {
+    font-size: 1.5rem; }
+}
+
 
 /* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––- */
@@ -100,8 +112,7 @@ a:hover, a:active, a:hover .table-cell {
 }
 @media (min-width: 550px) {
   .close {
-    font-size: 4em;
-  }
+    font-size: 4em; }
 }
 
 
