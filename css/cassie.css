@@ -72,6 +72,7 @@ p, .table {
   -ms-user-select: none;
   -moz-user-select: none
   -webkit-user-select: none;
+  -webkit-touch-callout: none;
   color: #215260;
   float: right;
   position: relative;
