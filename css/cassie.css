@@ -71,10 +71,7 @@ a:hover, a:active, a:hover .table-cell {
   line-height: 1px;
   background-color: #569bd2;
   color: #222; }
-/* .modal-head {
-  display: none; } */
 .modal-body {
-  /* display: none; */
   margin: 0;
   padding: 0 1em;
   color: #222; }
@@ -101,8 +98,6 @@ a:hover, a:active, a:hover .table-cell {
   height: 100%;
   position: absolute;
 }
-.hidden {
-  display: none; }
 @media (min-width: 550px) {
   .close {
     font-size: 4em;
@@ -114,3 +109,5 @@ a:hover, a:active, a:hover .table-cell {
 –––––––––––––––––––––––––––––––––––––––––––––––––- */
 .u-centered {
   text-align: center; }
+.u-hidden {
+  display: none; }

@@ -45,8 +45,8 @@ function openModal(game) {
   // document.getElementById("info-" + game).style.display = "block";
   var head = document.getElementById("head-" + game);
   var info = document.getElementById("info-" + game);
-  head.classList.remove("hidden");
-  info.classList.remove("hidden");
+  head.classList.remove("u-hidden");
+  info.classList.remove("u-hidden");
   head.hidden = false;
   info.hidden = false;
 }
@@ -55,12 +55,12 @@ function closeModal() {
   modal.style.display = "none";
   for (var modalBody of modalBodies) {
     // modalBody.style.display = "none";
-    modalBody.classList.add("hidden");
+    modalBody.classList.add("u-hidden");
     modalBody.hidden = true;
   }
   for (var modalHead of modalHeads) {
     // modalHead.style.display = "none";
-    modalHead.classList.add("hidden");
+    modalHead.classList.add("u-hidden");
     modalHead.hidden = true;
   }
 }
