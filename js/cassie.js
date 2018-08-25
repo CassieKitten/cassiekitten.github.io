@@ -3,8 +3,6 @@
 // http://www.opensource.org/licenses/mit-license.php
 
 var modal;
-// var modalBodies;
-// var modalHeads;
 var modalElements;
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -14,8 +12,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 function init() {
   // Assign vars
   modal = document.getElementById("modal");
-  // modalBodies = document.getElementsByClassName("modal-body");
-  // modalHeads = document.getElementsByClassName("modal-head");
   modalElements = [
     document.getElementById("head-plat"),
     document.getElementById("head-girl"),
@@ -56,9 +52,6 @@ function init() {
 }
 
 function openModal(game) {
-  // modal.style.display = "block";
-  // // document.getElementById("head-" + game).style.display = "block";
-  // // document.getElementById("info-" + game).style.display = "block";
   var head = document.getElementById("head-" + game);
   var info = document.getElementById("info-" + game);
   modal.classList.remove("u-hidden");
@@ -70,17 +63,6 @@ function openModal(game) {
 }
 
 function closeModal() {
-  // modal.style.display = "none";
-  // for (var modalBody of modalBodies) {
-  //   // modalBody.style.display = "none";
-  //   modalBody.classList.add("u-hidden");
-  //   modalBody.hidden = true;
-  // }
-  // for (var modalHead of modalHeads) {
-  //   // modalHead.style.display = "none";
-  //   modalHead.classList.add("u-hidden");
-  //   modalHead.hidden = true;
-  // }
   for (element of modalElements) {
     element.classList.add("u-hidden");
     element.hidden = true;
