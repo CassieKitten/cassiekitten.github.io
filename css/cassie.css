@@ -90,6 +90,9 @@ a:hover, a:active, a:hover .table-cell {
 .close {
   display: block;
   user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none
+  -webkit-user-select: none;
   color: #215260;
   float: right;
   position: relative;
