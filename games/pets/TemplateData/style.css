@@ -1,6 +1,6 @@
 body {
   background-color: #2d3b4a;
-  color: #fff;
+  color: #bbb;
   font-family: Helvetica, Verdana, Arial, sans-serif;
   font-size: 1.15em;
   text-align: center;
@@ -10,8 +10,8 @@ body {
 hr {
   height: 2px;
   border-width: 0;
-  color: #fff;
-  background-color: #fff;
+  color: #bbb;
+  background-color: #bbb;
   width: 1000px;
   max-width: 95%
 }
