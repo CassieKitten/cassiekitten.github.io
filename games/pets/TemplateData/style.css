@@ -1,6 +1,6 @@
 body {
   background-color: #2d3b4a;
-  color: #bbb;
+  color: #fff;
   font-family: Helvetica, Verdana, Arial, sans-serif;
   font-size: 1.15em;
   text-align: center;
@@ -10,8 +10,8 @@ body {
 hr {
   height: 2px;
   border-width: 0;
-  color: #bbb;
-  background-color: #bbb;
+  color: #fff;
+  background-color: #fff;
   width: 1000px;
   max-width: 95%
 }
@@ -43,10 +43,6 @@ td {
 a, a:hover, a:active, a:visited, a:link {
   color: #fff;
   text-decoration: none;
-}
-
-a:hover, a:active {
-  text-decoration: underline;
 }
 
 div.fullscreen {
