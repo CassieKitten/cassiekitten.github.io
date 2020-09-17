@@ -100,6 +100,7 @@ h3 {
 .button:hover {
   outline-width: 4px;
   outline-offset: -4px;
+  cursor: pointer;
 }
 
 .button[disabled]:hover {
@@ -117,37 +118,54 @@ h3 {
   margin-bottom: .5em;
 }
 
-.saved-food-row {
+.saved-food-row, .history-row {
   display: inline-block;
   width: 90%;
   position: relative;
-  /* border-radius: 8px; */
   margin-left: calc(5% - .3em);
-  /* padding: 0 .3em; */
+}
+
+.history-row {
+  margin-left: 5%;
 }
 
 .saved-food {
   display: inline-block;
-  /* border-radius: 8px; */
   border-radius: 8px;
   padding: .3em .5em;
   width: calc(100% - 2.4em);
 }
 
-/* .saved-food-row:nth-child(even) {
-  background-color: #e6e6e6;
-} */
+.history-item {
+  display: inline-block;
+  padding: .3em .5em;
+  width: 100%;
+}
 
-.saved-food:before {
-  content: '';
+.history-time {
+  float: left;
+  width: 5em;
+}
+
+.history-sugar {
+  float: right;
+  padding-right: 1em;
+}
+
+.saved-food::before, .history-row::before {
+  content: "";
   position: absolute;
   bottom: 0;
   width: calc(100% - 2.4em);
-  left: auto;
   border-bottom: 1px solid #616161;
 }
 
-.saved-food-row:last-child:before {
+.history-row::before {
+  width: calc(100% - 1em);
+  left: .5em;
+}
+
+.saved-food-row:last-child .saved-food::before, .history-row:last-child::before {
   border-bottom: none;
 }
 
@@ -167,7 +185,6 @@ h3 {
 a:link, a:visited, a:hover, a:active {
   color: #47935d;
   text-decoration: none;
-  /* font-weight: bold; */
 }
 
 a:hover, a:active {
@@ -175,8 +192,6 @@ a:hover, a:active {
 }
 
 a.saved-food-remove {
-  /* position: relative; */
-  /* left: 1.5em; */
   color: #934747;
   padding: .3em .3em .3em .5em;
   border-radius: 8px 0 0 8px;
@@ -192,7 +207,6 @@ a.saved-food-remove:hover ~ .saved-food {
   color: white;
   color: #e09999;
   border-radius: 0 8px 8px 0;
-  /* cursor: pointer; */
 }
 
 a.saved-food-remove:hover ~ .saved-food span {
