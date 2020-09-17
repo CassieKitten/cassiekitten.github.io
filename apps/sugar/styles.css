@@ -100,6 +100,7 @@ h3 {
 .button:hover {
   outline-width: 4px;
   outline-offset: -4px;
+  cursor: pointer;
 }
 
 .button[disabled]:hover {
@@ -117,17 +118,55 @@ h3 {
   margin-bottom: .5em;
 }
 
-.saved-food {
-  display: block;
+.saved-food-row, .history-row {
+  display: inline-block;
   width: 90%;
-  border-radius: 8px;
-  height: 1.15em;
-  margin: auto;
-  padding: .2em .3em;
+  position: relative;
+  margin-left: calc(5% - .3em);
 }
 
-.saved-food:nth-child(even) {
-  background-color: #e6e6e6;
+.history-row {
+  margin-left: 5%;
+}
+
+.saved-food {
+  display: inline-block;
+  border-radius: 8px;
+  padding: .3em .5em;
+  width: calc(100% - 2.4em);
+}
+
+.history-item {
+  display: inline-block;
+  padding: .3em .5em;
+  width: 100%;
+}
+
+.history-time {
+  float: left;
+  width: 5em;
+}
+
+.history-sugar {
+  float: right;
+  padding-right: 1em;
+}
+
+.saved-food::before, .history-row::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 2.4em);
+  border-bottom: 1px solid #616161;
+}
+
+.history-row::before {
+  width: calc(100% - 1em);
+  left: .5em;
+}
+
+.saved-food-row:last-child .saved-food::before, .history-row:last-child::before {
+  border-bottom: none;
 }
 
 .saved-food:hover {
@@ -135,7 +174,8 @@ h3 {
 }
 
 .saved-food-name {
-  float: left;
+  display: inline-block;
+  text-align: left;
 }
 
 .saved-food-sugar {
@@ -145,9 +185,30 @@ h3 {
 a:link, a:visited, a:hover, a:active {
   color: #47935d;
   text-decoration: none;
-  /* font-weight: bold; */
 }
 
 a:hover, a:active {
   color: white;
+}
+
+a.saved-food-remove {
+  color: #934747;
+  padding: .3em .3em .3em .5em;
+  border-radius: 8px 0 0 8px;
+}
+
+a.saved-food-remove:hover {
+  background-color: #934747;
+  color: white;
+}
+
+a.saved-food-remove:hover ~ .saved-food {
+  background-color: #934747;
+  color: white;
+  color: #e09999;
+  border-radius: 0 8px 8px 0;
+}
+
+a.saved-food-remove:hover ~ .saved-food span {
+  text-decoration: line-through;
 }

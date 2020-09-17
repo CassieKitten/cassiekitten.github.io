@@ -28,8 +28,11 @@
     </div>
     <div class="section">
       <h2>Eaten Today</h2>
-      <h3>0 / 0 grams &mdash; 0g remaining</h3>
-      <div id="eaten-today"></div>
+      <label for="sugar-max">Max daily sugar (g):</label>
+      <input type="number" class="text-input" id="sugar-max-input" name="sugar-max-input" value="" min="1"><br>
+      <h3><span id="sugar-eaten">0</span>g eaten &mdash; <span id="sugar-remaining">0</span>g <span id="remaining-or-over">remaining</span></h3>
+      <div id="saved-history"></div>
+      <input type="button" class="button button-red" id="clear-history" name="clear-history" value="Clear food history" disabled>
     </div>
   </body>
 </html>
